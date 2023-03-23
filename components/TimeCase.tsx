@@ -9,7 +9,7 @@ type Props = {
 export default function TimeCase({ time, tooltip }: Props) {
   const [hovered, setHovered] = useState(false)
   return (
-    <div className="relative flex h-8 w-8 items-center justify-center rounded-lg bg-secondary-light p-2 text-center ring-1 ring-white dark:bg-secondary-dark dark:ring-stroke-dark">
+    <div className="relative flex h-6 w-6 items-center justify-center rounded-md bg-secondary-light p-2 text-center ring-1 ring-white dark:bg-secondary-dark dark:ring-stroke-dark lg:h-8 lg:w-8 lg:rounded-lg">
       <span
         className=""
         onMouseOver={() => setHovered(true)}
