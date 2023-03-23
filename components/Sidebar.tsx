@@ -19,6 +19,7 @@ import Link from "next/link"
 import { useState } from "react"
 import { useTheme } from "next-themes"
 import useMediaQuery from "@/hooks/useMediaQuery"
+import GradientButton from "@/components/ui/GradientButton"
 
 type Props = {
   setIsSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>
@@ -90,26 +91,28 @@ function SocialsElement({ innerText, Icon }: LinkComponentProps) {
   )
 }
 function ToogleElement({ innerText, Icon }: LinkComponentProps) {
+  const [isOpen, setIsOpen] = useState<boolean>(true)
+
   return (
     <div>
-      <div className="flex cursor-pointer items-center gap-4 hover:text-orange-light">
+      <div
+        className="flex cursor-pointer items-center gap-4"
+        onClick={() => setIsOpen((prev) => !prev)}
+      >
         <Icon className="h-6 sm:h-9" />
         <span className="text-xl sm:text-2xl">{innerText}</span>
-        <ChevronDownIcon className="h-4 sm:h-6" />
+        <ChevronDownIcon className={`h-4 sm:h-6 ${isOpen && "rotate-180"}`} />
       </div>
-      <div>Items</div>
-      <div>Items</div>
-      <div>Items</div>
-      <div>Items</div>
-      <div>Items</div>
-      <div>Items</div>
-      <div>Items</div>
-      <div>Items</div>
-      <div>Items</div>
-      <div>Items</div>
-      <div>Items</div>
-      <div>Items</div>
-      <div>Items</div>
+      {isOpen && (
+        <div className="m-6 w-fit space-y-4 rounded-xl bg-secondary-light p-6  shadow-lg ring-1 ring-white dark:bg-secondary-dark dark:ring-stroke-dark">
+          <span className="text-2xl md:text-3xl">
+            Let&apos;s launch something big together.
+          </span>
+          <GradientButton className="w-fit p-3">
+            Apply for launchpad
+          </GradientButton>
+        </div>
+      )}
     </div>
   )
 }
@@ -171,7 +174,11 @@ export default function Sidebar({ setIsSidebarOpen }: Props) {
             Icon={CalendarDaysIcon}
             innerText="Upcoming Drops"
           />
-          <SidebarLink Icon={LightBulbIcon} innerText="Services" />
+          <SidebarLink
+            href="/services"
+            Icon={LightBulbIcon}
+            innerText="Services"
+          />
           <SocialsElement Icon={QuestionMarkCircleIcon} innerText="Support" />
           <ToogleElement Icon={MegaphoneIcon} innerText="Creators" />
         </nav>
