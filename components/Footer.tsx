@@ -1,5 +1,4 @@
-import DiscordIcon from "@/components/ui/DiscordIcon"
-import TwitterIcon from "@/components/ui/TwitterIcon"
+import { RxTwitterLogo, RxDiscordLogo } from "react-icons/rx"
 import LogoMark from "@/assets/LogoMark.svg"
 import IconButton from "@/components/ui/IconButton"
 import Image from "next/image"
@@ -15,10 +14,10 @@ export default function Footer({}: Props) {
           <Link
             href="/"
             className="flex items-center justify-center gap-4 self-start rounded-xl
-            bg-[#5865F2] p-3 text-white shadow-lg"
+            bg-[#5865F2] p-3 text-white shadow-lg hover:bg-indigo"
           >
-            <DiscordIcon width="24" height="18" className="fill-tx-dark" />
-            <span>Enter Dicord</span>
+            <RxDiscordLogo size={24} className="fill-tx-dark" />
+            <span>Enter Discord</span>
           </Link>
         </div>
       </div>
@@ -34,13 +33,15 @@ export default function Footer({}: Props) {
             </span>
           </div>
         </div>
-        <p>Pixelus {new Date().getFullYear()} &copy; All Rights Reserved.</p>
+        <p className="text-xs sm:text-base">
+          Pixelus {new Date().getFullYear()} &copy; All Rights Reserved.
+        </p>
         <div className="flex gap-4">
           <IconButton>
-            <DiscordIcon width="24" height="18" />
+            <RxDiscordLogo size={24} />
           </IconButton>
           <IconButton>
-            <TwitterIcon width="24" height="20" />
+            <RxTwitterLogo size={24} />
           </IconButton>
         </div>
       </div>

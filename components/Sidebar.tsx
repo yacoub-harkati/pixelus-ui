@@ -13,13 +13,12 @@ import {
   MoonIcon,
   SunIcon,
 } from "@heroicons/react/24/outline"
-import DiscordIcon from "@/components/ui/DiscordIcon"
-import TwitterIcon from "@/components/ui/TwitterIcon"
 import Link from "next/link"
 import { useState } from "react"
 import { useTheme } from "next-themes"
 import useMediaQuery from "@/hooks/useMediaQuery"
 import GradientButton from "@/components/ui/GradientButton"
+import { RxTwitterLogo, RxDiscordLogo } from "react-icons/rx"
 
 type Props = {
   setIsSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>
@@ -63,7 +62,7 @@ function SocialsElement({ innerText, Icon }: LinkComponentProps) {
             className="flex items-center gap-2 rounded-xl border-[1px] border-white p-3 shadow-lg hover:bg-gray-100 dark:border-stroke-dark hover:dark:bg-secondary-dark"
           >
             <div className="rounded-xl border-[1px] border-white p-2 dark:border-stroke-dark">
-              <TwitterIcon width="24" height="20" />
+              <RxTwitterLogo size={24} />
             </div>
             <span>Twitter</span>
           </Link>
@@ -72,7 +71,7 @@ function SocialsElement({ innerText, Icon }: LinkComponentProps) {
             className="flex items-center gap-2 rounded-xl border-[1px] border-white p-3 shadow-lg hover:bg-gray-100 dark:border-stroke-dark hover:dark:bg-secondary-dark"
           >
             <div className="rounded-xl border-[1px] border-white p-2 dark:border-stroke-dark">
-              <DiscordIcon width="24" height="18" />
+              <RxDiscordLogo size={24} />
             </div>
             <span>Discord</span>
           </Link>
@@ -125,7 +124,7 @@ export default function Sidebar({ setIsSidebarOpen }: Props) {
   }
   return (
     <div
-      className="fixed inset-0 bg-primary-dark/50"
+      className="fixed inset-0 z-50 bg-primary-dark/50"
       onClick={(e) => {
         setIsSidebarOpen(false)
       }}
