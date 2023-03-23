@@ -14,7 +14,6 @@ export default function Navbar() {
   const { theme, setTheme } = useTheme()
 
   const isAboveLargeScreen = useMediaQuery("(min-width: 1024px)")
-  const isBellowMediumScreen = useMediaQuery("(max-width: 640px)")
 
   function handleTheme() {
     setTheme(theme === "dark" ? "light" : "dark")
@@ -28,13 +27,8 @@ export default function Navbar() {
         <Bars3Icon className="h-6 w-6" />
       </IconButton>
       <Link href="/">
-        <header className="flex items-center gap-2 md:gap-4">
-          <Image
-            src={LogoMark}
-            alt="pixelus-logo"
-            width={isBellowMediumScreen ? 37 : 55}
-            height={isBellowMediumScreen ? 32 : 47}
-          />
+        <header className="flex items-center md:gap-4">
+          <Image src={LogoMark} alt="pixelus-logo" className="h-8 md:h-12" />
           <div className="flex flex-col">
             <span className="font-script text-2xl leading-[1.1] md:text-3xl">
               Pixelus
@@ -48,10 +42,10 @@ export default function Navbar() {
       {isAboveLargeScreen && (
         <div className="ml-auto flex items-center gap-4">
           <IconButton onClick={handleTheme}>
-            {theme === "dark" ? (
-              <MoonIcon className="pointer-events-none h-6" />
-            ) : theme === "light" ? (
+            {theme === "light" ? (
               <SunIcon className="pointer-events-none h-6" />
+            ) : theme === "dark" ? (
+              <MoonIcon className="pointer-events-none h-6" />
             ) : (
               <MoonIcon className="pointer-events-none h-6" />
             )}

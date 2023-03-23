@@ -108,7 +108,7 @@ function ToogleElement({ innerText, Icon }: LinkComponentProps) {
           <span className="text-2xl md:text-3xl">
             Let&apos;s launch something big together.
           </span>
-          <GradientButton className="w-fit p-3">
+          <GradientButton className="w-fit p-3 text-sm md:text-base">
             Apply for launchpad
           </GradientButton>
         </div>
@@ -135,13 +135,8 @@ export default function Sidebar({ setIsSidebarOpen }: Props) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between md:ml-[10%]">
-          <div className="flex items-center gap-2 md:gap-4">
-            <Image
-              src={LogoMark}
-              alt="pixelus-logo"
-              width={isBellowMediumScreen ? 37 : 55}
-              height={isBellowMediumScreen ? 32 : 47}
-            />
+          <div className="flex items-center md:gap-4">
+            <Image src={LogoMark} alt="pixelus-logo" className="h-8 md:h-12" />
             <div className="flex flex-col">
               <span className="font-script text-2xl leading-[1.1] md:text-3xl">
                 Pixelus
