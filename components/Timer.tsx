@@ -5,8 +5,8 @@ type Props = {}
 
 export default function Timer({}: Props) {
   return (
-    <div className="w-fit rounded-2xl bg-gradient-to-r from-orange-default to-indigo p-[1px] ring-1 ring-white dark:ring-stroke-dark">
-      <div className="flex flex-wrap items-center justify-center gap-2 rounded-2xl bg-primary-light p-3 dark:bg-primary-dark">
+    <div className="w-fit rounded-2xl bg-gradient-to-r from-orange-default to-indigo p-[1px]">
+      <div className="flex flex-wrap items-center justify-center gap-2 rounded-2xl bg-primary-light py-2 px-4 dark:bg-primary-dark">
         <p>Starts in</p>
         <div className="flex gap-2">
           <TimeCase time="29" tooltip="Days" />

@@ -17,7 +17,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider>
-          <div className="flex min-h-screen flex-1 flex-col bg-primary-light font-sans text-tx-light dark:bg-primary-dark dark:text-tx-dark">
+          <div className="flex min-h-screen flex-1 flex-col bg-primary-light font-sans text-sm text-tx-light dark:bg-primary-dark dark:text-tx-dark sm:text-base">
             <Navbar />
             {children}
             <Footer />

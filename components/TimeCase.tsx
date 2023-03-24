@@ -11,11 +11,10 @@ export default function TimeCase({ time, tooltip }: Props) {
   return (
     <div className="relative flex h-6 w-6 items-center justify-center rounded-md bg-secondary-light p-2 text-center ring-1 ring-white dark:bg-secondary-dark dark:ring-stroke-dark lg:h-8 lg:w-8 lg:rounded-lg">
       <span
-        className=""
-        onMouseOver={() => setHovered(true)}
+        onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        onPointerOver={() => setHovered(true)}
-        onPointerCancel={() => setHovered(false)}
+        onPointerDown={() => setHovered(true)}
+        onPointerUp={() => setHovered(false)}
       >
         {time}
       </span>
