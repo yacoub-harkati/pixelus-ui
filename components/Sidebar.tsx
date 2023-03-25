@@ -19,6 +19,7 @@ import { useTheme } from "next-themes"
 import useMediaQuery from "@/hooks/useMediaQuery"
 import GradientButton from "@/components/ui/GradientButton"
 import { RxTwitterLogo, RxDiscordLogo } from "react-icons/rx"
+import { motion as m } from "framer-motion"
 
 type Props = {
   setIsSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>
@@ -119,18 +120,45 @@ function ToogleElement({ innerText, Icon }: LinkComponentProps) {
 export default function Sidebar({ setIsSidebarOpen }: Props) {
   const { theme, setTheme } = useTheme()
   const isBellowMediumScreen = useMediaQuery("(max-width: 640px)")
+
   function handleTheme() {
     setTheme(theme === "dark" ? "light" : "dark")
   }
+
+  const variant = {
+    hidden: {
+      x: "-100%",
+    },
+    animate: {
+      x: "0",
+      transition: {
+        delay: 0.2,
+        duration: 0.5,
+        type: "tween",
+      },
+    },
+    exit: {
+      x: "-100%",
+    },
+  }
+
   return (
-    <div
+    <m.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { delay: 0.3 } }}
       className="fixed inset-0 z-50 bg-primary-dark/50"
       onClick={(e) => {
         setIsSidebarOpen(false)
       }}
     >
-      <div
-        className="fixed bottom-0 top-0 left-0 w-full overflow-y-auto border-r-[1px] border-white bg-primary-light py-6 px-4 text-tx-light shadow-lg dark:border-stroke-dark dark:bg-primary-dark dark:text-tx-dark md:w-[560px]"
+      <m.div
+        initial="hidden"
+        animate="animate"
+        exit="exit"
+        custom={isBellowMediumScreen}
+        variants={variant}
+        className="fixed bottom-0 top-0 left-0 w-full overflow-y-auto border-r-[1px] border-white bg-primary-light py-6 px-4 text-tx-light shadow-lg scrollbar-hide dark:border-stroke-dark dark:bg-primary-dark dark:text-tx-dark md:w-[560px]"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex justify-between md:ml-[10%]">
@@ -176,7 +204,7 @@ export default function Sidebar({ setIsSidebarOpen }: Props) {
           <SocialsElement Icon={QuestionMarkCircleIcon} innerText="Support" />
           <ToogleElement Icon={MegaphoneIcon} innerText="Creators" />
         </nav>
-      </div>
-    </div>
+      </m.div>
+    </m.div>
   )
 }

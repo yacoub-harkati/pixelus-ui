@@ -9,6 +9,7 @@ import IconButton from "@/components/ui/IconButton"
 import useMediaQuery from "@/hooks/useMediaQuery"
 import Sidebar from "@/components/Sidebar"
 import { useState } from "react"
+import { AnimatePresence } from "framer-motion"
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme()
@@ -61,7 +62,9 @@ export default function Navbar() {
           </Link>
         </div>
       )}
-      {isSidebarOpen && <Sidebar setIsSidebarOpen={setIsSidebarOpen} />}
+      <AnimatePresence>
+        {isSidebarOpen && <Sidebar setIsSidebarOpen={setIsSidebarOpen} />}
+      </AnimatePresence>
     </div>
   )
 }
