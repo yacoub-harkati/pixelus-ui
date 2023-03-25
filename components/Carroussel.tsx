@@ -2,7 +2,7 @@
 import Image from "next/image"
 import CarrousselBanner from "@/assets/carroussel-banner.png"
 import IconButton from "@/components/ui/IconButton"
-import React, { useState, useRef, useEffect, forwardRef } from "react"
+import React, { useState, useRef, useEffect } from "react"
 import {
   ChevronLeftIcon,
   ChevronRightIcon,
@@ -12,7 +12,7 @@ import { RxTwitterLogo, RxDiscordLogo } from "react-icons/rx"
 import Timer from "@/components/Timer"
 import useMediaQuery from "@/hooks/useMediaQuery"
 import { useInView } from "framer-motion"
-import nodeCrypto from "crypto"
+import crypto from "crypto"
 
 type Props = {
   num: number
@@ -72,7 +72,7 @@ export default function Carroussel() {
     .fill("")
     .map((_, i) => (
       <Slide
-        key={nodeCrypto.randomUUID()}
+        key={crypto.randomBytes(16).toString("hex")}
         setActiveDot={setActiveDot}
         num={i}
       />
@@ -123,7 +123,7 @@ export default function Carroussel() {
       <div className="absolute bottom-0 left-0 right-0 z-10 flex gap-1 p-6 md:justify-center">
         {content.map((_, i) => (
           <div
-            key={nodeCrypto.randomUUID()}
+            key={crypto.randomBytes(16).toString("hex")}
             className={`h-2 ${
               activeDot === i
                 ? "w-4  bg-stroke-dark dark:bg-primary-light"
