@@ -1,3 +1,5 @@
-import { randomUUID } from "crypto";
+import crypto from "crypto"
 
-export default randomUUID(){}
+export default function randomUUID() {
+  return crypto.randomBytes(16).toString("hex")
+}
