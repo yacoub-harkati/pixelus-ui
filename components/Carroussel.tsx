@@ -12,6 +12,7 @@ import { RxTwitterLogo, RxDiscordLogo } from "react-icons/rx"
 import Timer from "@/components/Timer"
 import useMediaQuery from "@/hooks/useMediaQuery"
 import { useInView } from "framer-motion"
+import nodeCrypto from "crypto"
 
 type Props = {
   num: number
@@ -70,7 +71,11 @@ export default function Carroussel() {
   const content = new Array(4)
     .fill("")
     .map((_, i) => (
-      <Slide key={crypto.randomUUID()} setActiveDot={setActiveDot} num={i} />
+      <Slide
+        key={nodeCrypto.randomUUID()}
+        setActiveDot={setActiveDot}
+        num={i}
+      />
     ))
 
   const slideRef = useRef<HTMLDivElement>(null)
@@ -118,9 +123,11 @@ export default function Carroussel() {
       <div className="absolute bottom-0 left-0 right-0 z-10 flex gap-1 p-6 md:justify-center">
         {content.map((_, i) => (
           <div
-            key={crypto.randomUUID()}
+            key={nodeCrypto.randomUUID()}
             className={`h-2 ${
-              activeDot === i ? "w-4 bg-primary-light" : "w-2 bg-stroke-dark"
+              activeDot === i
+                ? "w-4  bg-stroke-dark dark:bg-primary-light"
+                : "w-2 bg-white dark:bg-stroke-dark"
             } cursor-pointer rounded-full`}
             onClick={() => setActiveSlide(i)}
           ></div>
