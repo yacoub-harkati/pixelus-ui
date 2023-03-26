@@ -53,13 +53,13 @@ export default function Home() {
           <Card />
         </div>
       </div>
-      <div className="container mx-auto p-4">
+      <div className="container mx-auto py-6 px-4">
         <div className="flex flex-col-reverse sm:flex-row">
           <div className="flex shrink-0 basis-1/2 items-center justify-center">
-            <div className="flex flex-col justify-center gap-4 rounded-3xl bg-secondary-light p-12 shadow-lg ring-1 ring-white dark:bg-secondary-dark dark:ring-stroke-dark">
+            <div className="flex flex-col justify-center gap-4 rounded-3xl bg-secondary-light px-4 py-8 shadow-lg ring-1 ring-white dark:bg-secondary-dark dark:ring-stroke-dark md:px-12">
               <TypingText
                 title="| Working on a cool project of your own?"
-                className="text-base"
+                className="text-sm md:text-base"
               />
               <span className="text-2xl md:text-3xl">
                 Let&apos;s launch something big <br />
