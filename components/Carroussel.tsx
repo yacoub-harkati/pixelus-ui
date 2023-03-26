@@ -11,7 +11,7 @@ import {
 import { RxTwitterLogo, RxDiscordLogo } from "react-icons/rx"
 import Timer from "@/components/Timer"
 import useMediaQuery from "@/hooks/useMediaQuery"
-import { useInView } from "framer-motion"
+import { useInView, motion as m } from "framer-motion"
 import randomUUID from "@/utils/randomUUID"
 
 type Props = {
@@ -46,7 +46,7 @@ function Slide({ num, setActiveDot }: Props) {
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </p>
-        <Timer />
+        <Timer className="w-fit" />
         <div className="absolute bottom-0 right-0 flex justify-end gap-2 p-4">
           <IconButton className="rounded-xl">
             <LinkIcon className="h-12" />
@@ -118,15 +118,20 @@ export default function Carroussel() {
       </div>
       <div className="absolute bottom-0 left-0 right-0 z-10 flex gap-1 p-6 md:justify-center">
         {content.map((_, i) => (
-          <div
+          <m.div
+            initial={{ scaleX: activeDot === i ? 0.4 : 1 }}
+            animate={{
+              scaleX: 1,
+              transition: { type: "tween", duration: 0.4 },
+            }}
             key={randomUUID()}
             className={`h-2 ${
               activeDot === i
-                ? "w-4  bg-stroke-dark dark:bg-primary-light"
+                ? "w-5  bg-stroke-dark dark:bg-primary-light"
                 : "w-2 bg-white dark:bg-stroke-dark"
             } cursor-pointer rounded-full`}
             onClick={() => setActiveSlide(i)}
-          ></div>
+          ></m.div>
         ))}
       </div>
 

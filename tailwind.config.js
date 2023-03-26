@@ -27,6 +27,9 @@ module.exports = {
         },
         indigo: "#7B96F4",
       },
+      boxShadow: {
+        "orange-button": "0px 4px 20px",
+      },
       fontFamily: {
         sans: ["Montserrat", "sans-serif"],
         script: ["Righteous", "sans-serif"],
