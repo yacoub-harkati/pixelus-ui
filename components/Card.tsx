@@ -11,10 +11,21 @@ function LiveButton() {
   return (
     <Link
       href="#"
-      className="items-centers flex w-full shrink-0 cursor-pointer justify-center gap-2 rounded-xl bg-orange-default py-2 text-base font-semibold shadow-orange-button shadow-orange-default/30 ring-1 ring-orange-light md:mt-3 md:text-lg"
+      className="items-centers flex w-full shrink-0 cursor-pointer justify-center gap-2 rounded-xl bg-orange-default py-2 text-base font-semibold shadow-orange-button shadow-orange-default/30 ring-1 ring-orange-light md:text-lg"
     >
       <IoWalletOutline size={24} />
-      Live{" "}
+      Live
+    </Link>
+  )
+}
+
+function ComingSoonButton() {
+  return (
+    <Link
+      href="/"
+      className="items-centers flex w-full shrink-0 cursor-pointer justify-center gap-2 rounded-xl bg-secondary-light py-2 text-base font-semibold ring-1 ring-white hover:bg-gray-100 dark:bg-secondary-dark dark:ring-stroke-dark hover:dark:bg-stroke-dark  md:text-lg"
+    >
+      Coming Soon
     </Link>
   )
 }
@@ -30,7 +41,7 @@ export default function Card({}: Props) {
         />
       </div>
       <div className="p-2 md:p-4">
-        <p className="text-sm font-semibold md:text-xl">Degods X+</p>
+        <p className="text-sm font-semibold uppercase md:text-xl">Degods X+</p>
         <div className="mt mt-2 flex justify-between md:mt-3">
           <div className="flex flex-col">
             <span className="text-sm md:text-lg">Supply</span>
@@ -44,7 +55,9 @@ export default function Card({}: Props) {
           </div>
         </div>
       </div>
-      <div className="p-1 md:p-4">{false ? <LiveButton /> : <Timer />}</div>
+      <div className="mb-2 p-1 md:px-4">
+        {false ? <LiveButton /> : true ? <Timer /> : <ComingSoonButton />}
+      </div>
     </div>
   )
 }

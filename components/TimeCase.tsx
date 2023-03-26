@@ -27,7 +27,7 @@ export default function TimeCase({ time, tooltip }: Props) {
             transition: { type: "tween", duration: 0.3 },
           }}
           exit={{ opacity: 0, y: 20 }}
-          className="absolute -top-10 right-1/2 transform rounded-md bg-secondary-light p-2 text-center shadow-xl ring-1 ring-white dark:bg-secondary-dark dark:ring-stroke-dark md:-top-12"
+          className="absolute -top-10 right-1/2 transform rounded-md bg-secondary-light p-1 text-center shadow-xl ring-1 ring-white dark:bg-secondary-dark dark:ring-stroke-dark md:-top-12"
         >
           {tooltip}
         </m.span>

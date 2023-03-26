@@ -46,7 +46,9 @@ function Slide({ num, setActiveDot }: Props) {
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry.
         </p>
-        <Timer className="w-fit" />
+        <div className="w-fit">
+          <Timer className="px-8" />
+        </div>
         <div className="absolute bottom-0 right-0 flex justify-end gap-2 p-4">
           <IconButton className="rounded-xl">
             <LinkIcon className="h-12" />

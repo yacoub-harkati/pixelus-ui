@@ -2,6 +2,8 @@ import "./globals.css"
 import ThemeProvider from "@/components/ThemeProvider"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
+import Image from "next/image"
+import Curves from "@/components/Curves"
 
 export const metadata = {
   title: "Pixelus | Launchpad",
@@ -17,10 +19,15 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider>
-          <div className="flex min-h-screen flex-1 flex-col bg-primary-light font-sans text-sm text-tx-light dark:bg-primary-dark dark:text-tx-dark sm:text-base">
-            <Navbar />
-            {children}
-            <Footer />
+          <div className=" bg-primary-light font-sans text-sm text-tx-light dark:bg-primary-dark dark:text-tx-dark sm:text-base">
+            <div className="relative z-10 flex min-h-screen flex-col">
+              <Navbar />
+              {children}
+              <Footer />
+              <div className="absolute -top-[150px] -left-[20%] -z-[1] mx-auto h-full w-full overflow-hidden">
+                <Curves />
+              </div>
+            </div>
           </div>
         </ThemeProvider>
       </body>
