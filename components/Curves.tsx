@@ -12,7 +12,7 @@ export default function Curves({}: Props) {
       fill="currentColor"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_128_3478)">
+      <g clipPath="url(#clip0_128_3478)">
         <path
           d="M1031.64 800.692L1031.14 800.754C1021.89 723.986 1010.53 656.457 965.227 607.844C935.197 575.595 893.25 556.452 852.678 537.915C828.695 526.971 803.912 515.646 782.142 501.807C757.724 486.289 739.677 469.134 726.914 449.327C699.911 407.381 697.768 354.743 695.701 303.852C693.472 248.524 691.151 191.328 656.158 149.456C632.21 120.803 597.002 104.92 562.963 89.5593C531.12 75.1886 498.203 60.3247 474.181 35.0111C454.15 13.9118 440.636 -13.6216 432.867 -49.146C425.987 -80.562 424.452 -114.483 423.827 -146.462C422.653 -205.727 421.165 -279.497 379.224 -329.802L379.622 -330.129C398.1 -307.976 410.321 -279.749 416.959 -243.85C422.603 -213.361 423.649 -181.709 424.346 -146.475C425.658 -80.2063 430.639 -11.6516 474.557 34.6584C498.513 59.8971 531.385 74.7346 563.182 89.0789C597.267 104.466 632.544 120.377 656.556 149.128C672.303 167.973 682.825 191.498 688.695 221.035C693.923 247.375 695.089 276.067 696.222 303.815C698.292 354.659 700.416 407.225 727.356 449.049C755.686 493.059 805.115 515.629 852.919 537.459C893.537 556.023 935.529 575.193 965.625 607.516C986.887 630.344 1002.47 659.73 1013.26 697.38C1022.74 730.448 1027.39 765.135 1031.67 800.717L1031.64 800.692Z"
           fill="url(#paint0_linear_128_3478)"
@@ -199,8 +199,8 @@ export default function Curves({}: Props) {
           y2="258.595"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_128_3478"
@@ -210,8 +210,8 @@ export default function Curves({}: Props) {
           y2="292.961"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint2_linear_128_3478"
@@ -221,8 +221,8 @@ export default function Curves({}: Props) {
           y2="320.978"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint3_linear_128_3478"
@@ -232,8 +232,8 @@ export default function Curves({}: Props) {
           y2="343.561"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint4_linear_128_3478"
@@ -243,8 +243,8 @@ export default function Curves({}: Props) {
           y2="361.898"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint5_linear_128_3478"
@@ -254,8 +254,8 @@ export default function Curves({}: Props) {
           y2="377.14"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint6_linear_128_3478"
@@ -265,8 +265,8 @@ export default function Curves({}: Props) {
           y2="390.161"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint7_linear_128_3478"
@@ -276,8 +276,8 @@ export default function Curves({}: Props) {
           y2="402.162"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint8_linear_128_3478"
@@ -287,8 +287,8 @@ export default function Curves({}: Props) {
           y2="414.303"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint9_linear_128_3478"
@@ -298,8 +298,8 @@ export default function Curves({}: Props) {
           y2="427.56"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint10_linear_128_3478"
@@ -309,8 +309,8 @@ export default function Curves({}: Props) {
           y2="443.011"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint11_linear_128_3478"
@@ -320,8 +320,8 @@ export default function Curves({}: Props) {
           y2="461.835"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint12_linear_128_3478"
@@ -331,8 +331,8 @@ export default function Curves({}: Props) {
           y2="485.014"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint13_linear_128_3478"
@@ -342,8 +342,8 @@ export default function Curves({}: Props) {
           y2="513.648"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint14_linear_128_3478"
@@ -353,8 +353,8 @@ export default function Curves({}: Props) {
           y2="533.359"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint15_linear_128_3478"
@@ -364,8 +364,8 @@ export default function Curves({}: Props) {
           y2="547.899"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint16_linear_128_3478"
@@ -375,8 +375,8 @@ export default function Curves({}: Props) {
           y2="558.078"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint17_linear_128_3478"
@@ -386,8 +386,8 @@ export default function Curves({}: Props) {
           y2="564.656"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint18_linear_128_3478"
@@ -397,8 +397,8 @@ export default function Curves({}: Props) {
           y2="568.294"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint19_linear_128_3478"
@@ -408,8 +408,8 @@ export default function Curves({}: Props) {
           y2="569.695"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint20_linear_128_3478"
@@ -419,8 +419,8 @@ export default function Curves({}: Props) {
           y2="569.663"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint21_linear_128_3478"
@@ -430,8 +430,8 @@ export default function Curves({}: Props) {
           y2="568.916"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint22_linear_128_3478"
@@ -441,8 +441,8 @@ export default function Curves({}: Props) {
           y2="568.083"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint23_linear_128_3478"
@@ -452,8 +452,8 @@ export default function Curves({}: Props) {
           y2="567.99"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint24_linear_128_3478"
@@ -463,8 +463,8 @@ export default function Curves({}: Props) {
           y2="569.283"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint25_linear_128_3478"
@@ -474,8 +474,8 @@ export default function Curves({}: Props) {
           y2="572.742"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint26_linear_128_3478"
@@ -485,8 +485,8 @@ export default function Curves({}: Props) {
           y2="578.082"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint27_linear_128_3478"
@@ -496,8 +496,8 @@ export default function Curves({}: Props) {
           y2="591.221"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint28_linear_128_3478"
@@ -507,8 +507,8 @@ export default function Curves({}: Props) {
           y2="611.226"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint29_linear_128_3478"
@@ -518,8 +518,8 @@ export default function Curves({}: Props) {
           y2="637.032"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint30_linear_128_3478"
@@ -529,8 +529,8 @@ export default function Curves({}: Props) {
           y2="659.118"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint31_linear_128_3478"
@@ -540,8 +540,8 @@ export default function Curves({}: Props) {
           y2="677.932"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint32_linear_128_3478"
@@ -551,8 +551,8 @@ export default function Curves({}: Props) {
           y2="694.573"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint33_linear_128_3478"
@@ -562,8 +562,8 @@ export default function Curves({}: Props) {
           y2="710.064"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint34_linear_128_3478"
@@ -573,8 +573,8 @@ export default function Curves({}: Props) {
           y2="725.803"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint35_linear_128_3478"
@@ -584,8 +584,8 @@ export default function Curves({}: Props) {
           y2="742.202"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint36_linear_128_3478"
@@ -595,8 +595,8 @@ export default function Curves({}: Props) {
           y2="760.271"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint37_linear_128_3478"
@@ -606,8 +606,8 @@ export default function Curves({}: Props) {
           y2="780.947"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint38_linear_128_3478"
@@ -617,8 +617,8 @@ export default function Curves({}: Props) {
           y2="805.161"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint39_linear_128_3478"
@@ -628,8 +628,8 @@ export default function Curves({}: Props) {
           y2="833.98"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint40_linear_128_3478"
@@ -639,8 +639,8 @@ export default function Curves({}: Props) {
           y2="258.454"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint41_linear_128_3478"
@@ -650,8 +650,8 @@ export default function Curves({}: Props) {
           y2="514.095"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint42_linear_128_3478"
@@ -661,8 +661,8 @@ export default function Curves({}: Props) {
           y2="578.115"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <linearGradient
           id="paint43_linear_128_3478"
@@ -672,8 +672,8 @@ export default function Curves({}: Props) {
           y2="833.709"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="currentColor" />
-          <stop offset="1" stop-color="currentColor" stop-opacity="0" />
+          <stop stopColor="currentColor" />
+          <stop offset="1" stopColor="currentColor" stopOpacity="0" />
         </linearGradient>
         <clipPath id="clip0_128_3478">
           <rect
