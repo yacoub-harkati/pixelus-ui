@@ -6,7 +6,7 @@ type Props = {}
 
 export default function CardFilter({}: Props) {
   const [filter, setFilter] = useState("all")
-  const [width, setWidth] = useState("auto")
+  const [width, setWidth] = useState(null)
   const [tranformX, setTranformX] = useState(0)
   const [allRef, allBounds] = useMeasure()
   const [daysRef, daysBounds] = useMeasure()
@@ -76,8 +76,11 @@ export default function CardFilter({}: Props) {
         </div>
       </div>
       <div
-        className="absolute bottom-0 h-2 w-20 rounded-2xl bg-gradient-to-r from-orange-default to-indigo transition-all duration-200"
-        style={{ transform: `translateX(${tranformX}px)`, width }}
+        className="absolute bottom-0 h-1 w-20 rounded-2xl bg-gradient-to-r from-orange-default to-indigo transition-all duration-200"
+        style={{
+          transform: `translateX(${tranformX}px)`,
+          width: width || allBounds.width,
+        }}
       ></div>
     </div>
   )
