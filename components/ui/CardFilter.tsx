@@ -1,12 +1,13 @@
 "use client"
 import { useState, MouseEvent } from "react"
 import useMeasure from "react-use-measure"
+import { motion as m } from "framer-motion"
 
 type Props = {}
 
 export default function CardFilter({}: Props) {
   const [filter, setFilter] = useState("all")
-  const [width, setWidth] = useState(null)
+  const [width, setWidth] = useState<string | null>(null)
   const [tranformX, setTranformX] = useState(0)
   const [allRef, allBounds] = useMeasure()
   const [daysRef, daysBounds] = useMeasure()
@@ -33,8 +34,6 @@ export default function CardFilter({}: Props) {
       setWidth(`${bounds.width}px`)
     }
   }
-
-  console.log(filter)
 
   return (
     <div
@@ -75,13 +74,13 @@ export default function CardFilter({}: Props) {
           Passed
         </div>
       </div>
-      <div
-        className="absolute bottom-0 h-1 w-20 rounded-2xl bg-gradient-to-r from-orange-default to-indigo transition-all duration-200"
+      <m.div
+        animate={{ x: tranformX, transition: { type: "tween", duration: 0.1 } }}
+        className="absolute bottom-0 h-1 w-20 rounded-2xl bg-gradient-to-r from-orange-default to-indigo"
         style={{
-          transform: `translateX(${tranformX}px)`,
           width: width || allBounds.width,
         }}
-      ></div>
+      ></m.div>
     </div>
   )
 }

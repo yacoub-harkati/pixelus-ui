@@ -24,7 +24,7 @@ export default function RootLayout({
               <Navbar />
               {children}
               <Footer />
-              <div className="absolute -top-[150px] -left-[20%] -z-[1] mx-auto h-full w-full overflow-hidden">
+              <div className="absolute -top-[350px] -left-[20%] -z-[1] mx-auto h-full w-full overflow-hidden md:-top-[150px]">
                 <Curves />
               </div>
             </div>
