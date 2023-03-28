@@ -19,7 +19,7 @@ import { useTheme } from "next-themes"
 import useMediaQuery from "@/hooks/useMediaQuery"
 import GradientButton from "@/components/ui/GradientButton"
 import { RxTwitterLogo, RxDiscordLogo } from "react-icons/rx"
-import { motion as m } from "framer-motion"
+import { motion as m, AnimatePresence } from "framer-motion"
 
 type Props = {
   setIsSidebarOpen: React.Dispatch<React.SetStateAction<boolean>>
@@ -29,13 +29,19 @@ interface LinkComponentProps {
   innerText: string
   Icon: React.ForwardRefExoticComponent<React.SVGProps<SVGSVGElement>>
   href?: string
+  setIsSidebarOpen?: (a: boolean) => void
 }
-
-function SidebarLink({ innerText, Icon, href = "/" }: LinkComponentProps) {
+function SidebarLink({
+  innerText,
+  Icon,
+  setIsSidebarOpen,
+  href = "/",
+}: LinkComponentProps) {
   return (
     <Link
       href={href}
       className="flex items-center gap-4 hover:text-orange-light"
+      onClick={() => setIsSidebarOpen!(false)}
     >
       <Icon className="h-8 sm:h-9" />
       <span className="text-xl sm:text-2xl">{innerText}</span>
@@ -56,37 +62,46 @@ function SocialsElement({ innerText, Icon }: LinkComponentProps) {
         <span className="text-xl sm:text-2xl">{innerText}</span>
         <ChevronDownIcon className={`h-4 sm:h-6 ${isOpen && "rotate-180"}`} />
       </div>
-      {isOpen && (
-        <div className="m-6 flex flex-wrap gap-2">
-          <Link
-            href="#"
-            className="flex items-center gap-2 rounded-xl border-[1px] border-white p-3 shadow-lg hover:bg-gray-100 dark:border-stroke-dark hover:dark:bg-secondary-dark"
+      <AnimatePresence>
+        {isOpen && (
+          <m.div
+            className="overflow-hidden"
+            initial={{ height: 0 }}
+            animate={{ height: "auto" }}
+            exit={{ height: 0 }}
           >
-            <div className="rounded-xl border-[1px] border-white p-2 dark:border-stroke-dark">
-              <RxTwitterLogo size={24} />
+            <div className=" m-6 flex flex-wrap gap-2">
+              <Link
+                href="#"
+                className="flex items-center gap-2 rounded-xl border-[1px] border-white p-3 shadow-lg hover:bg-gray-100 dark:border-stroke-dark hover:dark:bg-secondary-dark"
+              >
+                <div className="rounded-xl border-[1px] border-white p-2 dark:border-stroke-dark">
+                  <RxTwitterLogo size={24} />
+                </div>
+                <span>Twitter</span>
+              </Link>
+              <Link
+                href="#"
+                className="flex items-center gap-2 rounded-xl border-[1px] border-white p-3 shadow-lg hover:bg-gray-100 dark:border-stroke-dark hover:dark:bg-secondary-dark"
+              >
+                <div className="rounded-xl border-[1px] border-white p-2 dark:border-stroke-dark">
+                  <RxDiscordLogo size={24} />
+                </div>
+                <span>Discord</span>
+              </Link>
+              <Link
+                href="#"
+                className="flex items-center gap-2 rounded-xl border-[1px] border-white p-3 shadow-lg hover:bg-gray-100 dark:border-stroke-dark hover:dark:bg-secondary-dark"
+              >
+                <div className="rounded-xl border-[1px] border-white p-2 dark:border-stroke-dark">
+                  <AtSymbolIcon className="h-[23px]" />
+                </div>
+                <span>Email</span>
+              </Link>
             </div>
-            <span>Twitter</span>
-          </Link>
-          <Link
-            href="#"
-            className="flex items-center gap-2 rounded-xl border-[1px] border-white p-3 shadow-lg hover:bg-gray-100 dark:border-stroke-dark hover:dark:bg-secondary-dark"
-          >
-            <div className="rounded-xl border-[1px] border-white p-2 dark:border-stroke-dark">
-              <RxDiscordLogo size={24} />
-            </div>
-            <span>Discord</span>
-          </Link>
-          <Link
-            href="#"
-            className="flex items-center gap-2 rounded-xl border-[1px] border-white p-3 shadow-lg hover:bg-gray-100 dark:border-stroke-dark hover:dark:bg-secondary-dark"
-          >
-            <div className="rounded-xl border-[1px] border-white p-2 dark:border-stroke-dark">
-              <AtSymbolIcon className="h-[23px]" />
-            </div>
-            <span>Email</span>
-          </Link>
-        </div>
-      )}
+          </m.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
@@ -103,16 +118,25 @@ function ToogleElement({ innerText, Icon }: LinkComponentProps) {
         <span className="text-xl sm:text-2xl">{innerText}</span>
         <ChevronDownIcon className={`h-4 sm:h-6 ${isOpen && "rotate-180"}`} />
       </div>
-      {isOpen && (
-        <div className="m-6 w-fit space-y-4 rounded-xl bg-secondary-light p-6  shadow-lg ring-1 ring-white dark:bg-secondary-dark dark:ring-stroke-dark">
-          <span className="text-2xl md:text-3xl">
-            Let&apos;s launch something big together.
-          </span>
-          <GradientButton className="w-fit p-3 text-sm md:text-base">
-            Apply for launchpad
-          </GradientButton>
-        </div>
-      )}
+      <AnimatePresence>
+        {isOpen && (
+          <m.div
+            className="overflow-hidden"
+            initial={{ height: 0 }}
+            animate={{ height: "auto" }}
+            exit={{ height: 0 }}
+          >
+            <div className="m-6 w-fit space-y-4 rounded-xl bg-secondary-light p-6  shadow-lg ring-1 ring-white dark:bg-secondary-dark dark:ring-stroke-dark">
+              <span className="text-2xl md:text-3xl">
+                Let&apos;s launch something big together.
+              </span>
+              <GradientButton className="w-fit p-3 text-sm md:text-base">
+                Apply for launchpad
+              </GradientButton>
+            </div>
+          </m.div>
+        )}
+      </AnimatePresence>
     </div>
   )
 }
@@ -190,16 +214,22 @@ export default function Sidebar({ setIsSidebarOpen }: Props) {
           </IconButton>
         </div>
         <nav className="ml-6 mt-12 space-y-4 sm:ml-24">
-          <SidebarLink Icon={HomeIcon} innerText="Home Page" />
+          <SidebarLink
+            Icon={HomeIcon}
+            innerText="Home Page"
+            setIsSidebarOpen={setIsSidebarOpen}
+          />
           <SidebarLink
             href="/upcoming-drops"
             Icon={CalendarDaysIcon}
             innerText="Upcoming Drops"
+            setIsSidebarOpen={setIsSidebarOpen}
           />
           <SidebarLink
             href="/services"
             Icon={LightBulbIcon}
             innerText="Services"
+            setIsSidebarOpen={setIsSidebarOpen}
           />
           <SocialsElement Icon={QuestionMarkCircleIcon} innerText="Support" />
           <ToogleElement Icon={MegaphoneIcon} innerText="Creators" />
