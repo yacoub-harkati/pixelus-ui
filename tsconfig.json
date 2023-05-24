@@ -26,6 +26,7 @@
       "@/components/ui/*": ["./components/ui/*"],
       "@/assets/*": ["./assets/*"],
       "@/hooks/*": ["./hooks/*"],
+      "@/utils/*": ["./utils/*"],
       "@/state/*": ["./state/*"]
     }
   },
